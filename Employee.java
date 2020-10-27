@@ -1,14 +1,11 @@
 
 public class Employee {
- String EmployeeId;
- String EmployeeName;
- double BasicSal;
- double HRA;
- double Medical;
- double PF;
- double PT=200;
- double NetSal;
- double GrossSal;
+ private String EmployeeId;
+ private String EmployeeName;
+ private double BasicSal;
+ private double HRA;
+ private double Medical, PF, NetSal, GrossSal;
+ private double PT=200;
  
  public Employee(){
 	 
