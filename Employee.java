@@ -42,5 +42,4 @@ public class Employee {
 		System.out.println("Gross: " + this.grossSalary);
 		System.out.println("Net: " + this.netSalary);
 	}
-	
 }
