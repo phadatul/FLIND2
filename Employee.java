@@ -26,8 +26,8 @@ public class Employee {
 		this.medical = med;
 		this.pf = 0.12 * bsal;
 		this.pt = 200;
-		this.gross_salary = basic_salary + hra + med;
-		this.net_salary = basic_salary + hra + med - pf - pt;
+// 		this.gross_salary = basic_salary + hra + med;
+// 		this.net_salary = basic_salary + hra + med - pf - pt;
 	}
 	
 	public double calculategrosssalary()
