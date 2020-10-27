@@ -20,17 +20,5 @@ public class Demo {
         vehicle.move();
         car.move();
         bike.move();
-
-        // Assign2 Demo
-
-        Manager m1 = new Manager("A", commonBasicSalary, commonMedical);
-        MarketingExecutive me1 = new MarketingExecutive("B", commonBasicSalary, commonMedical, 10);
-
-        showDetails(m1);
-        showDetails(me1);
-    }
-
-    private static void showDetails(Employee e) {
-        e.printDetails();
     }
 }
