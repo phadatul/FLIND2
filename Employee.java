@@ -9,38 +9,6 @@ public class Employee {
 	private double pt;
 	private static int count = 0;
 
-	public double getSalary() {
-		return salary;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public double getHra() {
-		return hra;
-	}
-
-	public double getMedical() {
-		return medical;
-	}
-
-	public double getPf() {
-		return pf;
-	}
-
-	public double getPt() {
-		return pt;
-	}
-
-	public static int getCount() {
-		return count;
-	}
-
 	public Employee() {
 		count++;
 		this.id = 10643 + count;
@@ -63,13 +31,11 @@ public class Employee {
 	}
 
 	public double calcGrossSalary() {
-		double sal = this.salary + this.hra + this.medical;
-		return sal;
+		return this.salary + this.hra + this.medical;
 	}
 
 	public double calcNetSalary() {
-		double sal = this.salary + this.hra + this.medical - this.pf - this.pt;
-		return sal;
+		return this.salary + this.hra + this.medical - this.pf - this.pt;
 	}
 
 	public void salary_structure() {
