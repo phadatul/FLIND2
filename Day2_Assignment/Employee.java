@@ -35,17 +35,29 @@ public class Employee {
 		this.hra = this.basic_sal*0.5;
 		this.pf = this.basic_sal*0.12;
 		this.pt = 200;
-		this.gross_sal = this.basic_sal + this.hra+ this.medical;
-		this.net_sal = this.gross_sal-(this.pf+this.pt);
+		
 				
 	}
 	
+	public double calculateGrossSalary()
+	{
+		this.gross_sal = this.basic_sal + this.hra+ this.medical;
+		return this.gross_sal;
+
+	}
+	
+	public double calculateNetSalary()
+	{		
+		this.net_sal = this.calculateGrossSalary()-(this.pf+this.pt);
+		return this.net_sal;
+
+	}
 	public void displayData()
 	{
 		System.out.println("Employee ID: "+ this.empid);
 		System.out.println("Employee Name: " +this.ename);
-		System.out.println("Gross Salary: "+ this.gross_sal);
-		System.out.println("Net Salary: "+ this.net_sal);
+		System.out.println("Gross Salary: "+ this.calculateGrossSalary());
+		System.out.println("Net Salary: "+ this.calculateNetSalary());
 	}
 	
 
