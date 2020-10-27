@@ -15,11 +15,13 @@ public class Employee {
 	public Employee()
 	{
 //		System.out.println("a");
+		eid +=1 ;
 	}
 	
 	public Employee(String name, double bsal, double med)
 	{
 //		this.eid = id;
+		this();
 		this.ename = name;
 		this.basic_salary = bsal;
 		this.hra = 0.5*bsal;
@@ -35,7 +37,7 @@ public class Employee {
 		System.out.println("Employee ID: " + empid);
 		System.out.println("Gross Salary: " + gross_salary);
 		System.out.println("Net Salary: " + net_salary);
-		eid +=1 ;
+		
 	}
 
 }
