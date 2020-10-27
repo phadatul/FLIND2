@@ -33,12 +33,23 @@ public class Employee {
         pf = 0.12 * basicSalary;
     }
 
+    public double getAllowances() {
+        return hra + medical;
+    }
+
     private void calculateGrossSalary() {
-        grossSalary = basicSalary + hra + medical;
+        grossSalary = basicSalary + getAllowances();
     }
 
     private void calculateNetSalary() {
         netSalary = grossSalary - (pt + pf);
+    }
+
+    public void update() {
+        calculateHRA();
+        calculatePF();
+        calculateGrossSalary();
+        calculateNetSalary();
     }
 
     public void printDetails() {

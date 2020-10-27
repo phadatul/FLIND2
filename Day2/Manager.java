@@ -9,6 +9,13 @@ public class Manager extends Employee {
         petrolAllowance = 0.08 * basicSalary;
         foodAllowance = 0.13 * basicSalary;
         otherAllowance = 0.03 % basicSalary;
+
+        update();
+    }
+
+    @Override
+    public double getAllowances() {
+        return super.getAllowances() + petrolAllowance + foodAllowance + otherAllowance;
     }
 
     @Override

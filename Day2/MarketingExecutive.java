@@ -9,6 +9,13 @@ public class MarketingExecutive extends Employee {
         this.kilometersTravelled = kilometersTravelled;
         tourAllowance = 5 * kilometersTravelled;
         telephoneAllowance = 1500;
+
+        update();
+    }
+
+    @Override
+    public double getAllowances() {
+        return super.getAllowances() + tourAllowance + telephoneAllowance;
     }
 
     @Override
