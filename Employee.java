@@ -7,37 +7,73 @@ public class Employee {
 	private double medical;
 	private double pf;
 	private double pt;
-	private double net_salary;
-	private double gross_salary;
-	private static int count = 0; 
+	private static int count = 0;
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public double getHra() {
+		return hra;
+	}
+
+	public double getMedical() {
+		return medical;
+	}
+
+	public double getPf() {
+		return pf;
+	}
+
+	public double getPt() {
+		return pt;
+	}
+
+	public static int getCount() {
+		return count;
+	}
+
 	public Employee() {
-		this.count++;
-		this.id = 10643 + this.count;
+		count++;
+		this.id = 10643 + count;
 		this.pt = 200;
 		this.medical = 5000;
 	}
-	public Employee(String name,int salary) {
+
+	public Employee(String name, int salary) {
 		this();
 		this.name = name;
 		this.salary = salary;
-		this.hra = 0.5*this.salary;
-		this.pf = 0.12*this.salary;
+		this.hra = 0.5 * this.salary;
+		this.pf = 0.12 * this.salary;
 	}
+
 	public void details() {
-		System.out.println("Employee ID : "+this.id);
-		System.out.println("Name : "+this.name);
-		System.out.println("Base Salary : "+this.salary);
+		System.out.println("Employee ID : " + this.id);
+		System.out.println("Name : " + this.name);
+		System.out.println("Base Salary : " + this.salary);
 	}
+
 	public double calcGrossSalary() {
-		this.gross_salary = this.salary+this.hra+this.medical;
-		return this.gross_salary;
+		double sal = this.salary + this.hra + this.medical;
+		return sal;
 	}
+
 	public double calcNetSalary() {
-		this.net_salary = this.gross_salary - this.pf - this.pt;
-		return this.net_salary;
+		double sal = this.salary + this.hra + this.medical - this.pf - this.pt;
+		return sal;
 	}
+
 	public void salary_structure() {
-		System.out.println("Gross Salary : "+this.calcGrossSalary());
-		System.out.println("Net Salary : "+this.calcNetSalary());
+		System.out.println("Gross Salary : " + this.calcGrossSalary());
+		System.out.println("Net Salary : " + this.calcNetSalary());
 	}
 }
