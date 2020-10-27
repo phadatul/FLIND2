@@ -9,13 +9,15 @@ public class Employee {
 	private double pt;
 	private double net_salary;
 	private double gross_salary;
+	private static int count = 0; 
 	public Employee() {
+		this.count++;
+		this.id = 10643 + this.count;
 		this.pt = 200;
 		this.medical = 5000;
 	}
-	public Employee(int id, String name,int salary) {
+	public Employee(String name,int salary) {
 		this();
-		this.id = id;
 		this.name = name;
 		this.salary = salary;
 		this.hra = 0.5*this.salary;
