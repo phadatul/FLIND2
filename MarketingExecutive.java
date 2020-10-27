@@ -23,12 +23,8 @@ public class MarketingExecutive extends Employee {
 	
 	@Override
 	public void EmpDetails(){
-		 System.out.println("Employee Name: "+this.EmployeeName);
-		 System.out.println("Employee Id: "+ this.EmployeeId);
-		 System.out.println("Basic Salary: "+ this.BasicSal);
-		 System.out.println("Tour Allowance: "+this.TourAllowance);
-		 System.out.println("Telephone Allowance: "+this.TelephoneAllowance);
-		 System.out.println("Gross Salary: "+ this.GrossSal);
-		 System.out.println("Net Salary: "+ this.NetSal);
+		super.EmpDetails();
+		System.out.println("Tour Allowance: "+this.TourAllowance);
+		System.out.println("Telephone Allowance: "+this.TelephoneAllowance);
 	 }
 }
