@@ -1,5 +1,6 @@
 
 public class Employee {
+ private static int IdGen=0;
  private String EmployeeId;
  private String EmployeeName;
  private double BasicSal;
@@ -12,7 +13,8 @@ public class Employee {
  }
  
  public Employee(String id, String name, double sal, double med){
-	 this.EmployeeId=id;
+	 IdGen++;
+	 this.EmployeeId=IdGen+"";
 	 this.EmployeeName=name;
 	 this.BasicSal=sal;
 	 this.PF=0.12*sal;
