@@ -39,5 +39,9 @@ public class Employee {
  public double calculateGrossSal(){
 	 return (this.BasicSal+this.HRA+this.Medical);
  }
+	
+public static double getPT() {
+	return PT;
+}
  
 }
