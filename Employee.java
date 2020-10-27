@@ -12,7 +12,7 @@ public class Employee {
 	 
  }
  
- public Employee(String id, String name, double sal, double med){
+ public Employee(String name, double sal, double med){
 	 IdGen++;
 	 this.EmployeeId=IdGen+"";
 	 this.EmployeeName=name;
