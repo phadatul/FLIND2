@@ -5,8 +5,10 @@ public class Demo {
 
         Employee e1 = new Employee("A", commonBasicSalary, commonMedical);
         Employee e2 = new Employee("A", commonBasicSalary, commonMedical);
+        Employee e3 = new Employee();
 
         System.out.println(e1.getEmployeeId());
         System.out.println(e2.getEmployeeId());
+        System.out.println(e3.getEmployeeId());
     }
 }

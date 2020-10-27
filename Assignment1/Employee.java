@@ -10,10 +10,11 @@ public class Employee {
     private double grossSalary;
 
     public Employee() {
+        this.employeeId = IdGenerator.generateId();
     }
 
     public Employee(String employeeName, double basicSalary, double medical) {
-        this.employeeId = IdGenerator.generateId();
+        this();
         this.employeeName = employeeName;
         this.basicSalary = basicSalary;
         this.medical = medical;
