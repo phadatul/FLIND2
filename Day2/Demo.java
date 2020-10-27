@@ -10,5 +10,15 @@ public class Demo {
         System.out.println(e1.getEmployeeId());
         System.out.println(e2.getEmployeeId());
         System.out.println(e3.getEmployeeId());
+
+        // inheritance demo
+        
+        Vehicle vehicle = new Vehicle();
+        Car car = new Car();
+        Bike bike = new Bike();
+
+        vehicle.move();
+        car.move();
+        bike.move();
     }
 }
