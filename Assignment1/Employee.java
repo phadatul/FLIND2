@@ -12,8 +12,8 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(int employeeId, String employeeName, double basicSalary, double medical) {
-        this.employeeId = employeeId;
+    public Employee(String employeeName, double basicSalary, double medical) {
+        this.employeeId = IdGenerator.generateId();
         this.employeeName = employeeName;
         this.basicSalary = basicSalary;
         this.medical = medical;
@@ -47,5 +47,9 @@ public class Employee {
         System.out.println("Medical: " + medical);
         System.out.println("Gross Salary: " + grossSalary);
         System.out.println("Net Salary: " + netSalary);
+    }
+
+    public int getEmployeeId() {
+        return employeeId;
     }
 }
