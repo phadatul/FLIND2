@@ -3,6 +3,9 @@ public class Person {
     private int id;
     private String name;
 
+    /* HAS-A relation */
+    private Address address;
+
     public int getId() {
         return id;
     }
@@ -17,6 +20,14 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public static void main(String[] args) {
