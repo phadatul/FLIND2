@@ -1,14 +1,14 @@
 
 public class Employee {
-	public int eid;
-	public String ename;
-	public double basic_salary;
-	public double hra;
-	public double medical;
-	public double pf;
-	public double pt;
-	public double gross_salary;
-	public double net_salary;
+	private int eid;
+	private String ename;
+	private double basic_salary;
+	private double hra;
+	private double medical;
+	private double pf;
+	private double pt;
+	private double gross_salary;
+	private double net_salary;
 
 	public Employee()
 	{
