@@ -26,7 +26,11 @@ public class Demo {
         Manager m1 = new Manager("A", commonBasicSalary, commonMedical);
         MarketingExecutive me1 = new MarketingExecutive("B", commonBasicSalary, commonMedical, 10);
 
-        m1.printDetails();
-        me1.printDetails();
+        showDetails(m1);
+        showDetails(me1);
+    }
+
+    private static void showDetails(Employee e) {
+        e.printDetails();
     }
 }
