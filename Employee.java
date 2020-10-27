@@ -1,6 +1,8 @@
 
 public class Employee {
-	private int eid;
+
+	private static int eid = 0;
+	private int empid = eid;
 	private String ename;
 	private double basic_salary;
 	private double hra;
@@ -9,15 +11,15 @@ public class Employee {
 	private double pt;
 	private double gross_salary;
 	private double net_salary;
-
+	
 	public Employee()
 	{
 //		System.out.println("a");
 	}
 	
-	public Employee(int id, String name, double bsal, double med)
+	public Employee(String name, double bsal, double med)
 	{
-		this.eid = id;
+//		this.eid = id;
 		this.ename = name;
 		this.basic_salary = bsal;
 		this.hra = 0.5*bsal;
@@ -28,13 +30,12 @@ public class Employee {
 		this.net_salary = basic_salary + hra + med - pf - pt;
 	}
 	
-	public void showgross()
+	public void showdetails()
 	{
+		System.out.println("Employee ID: " + empid);
 		System.out.println("Gross Salary: " + gross_salary);
+		System.out.println("Net Salary: " + net_salary);
+		eid +=1 ;
 	}
 
-	public void shownet()
-	{
-		System.out.println("Net Salary: " + net_salary);
-	}
 }
