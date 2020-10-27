@@ -20,5 +20,13 @@ public class Demo {
         vehicle.move();
         car.move();
         bike.move();
+
+        // Assign2 Demo
+
+        Manager m1 = new Manager("A", commonBasicSalary, commonMedical);
+        MarketingExecutive me1 = new MarketingExecutive("B", commonBasicSalary, commonMedical, 10);
+
+        m1.printDetails();
+        me1.printDetails();
     }
 }

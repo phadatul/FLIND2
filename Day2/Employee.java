@@ -53,4 +53,20 @@ public class Employee {
     public int getEmployeeId() {
         return employeeId;
     }
+
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public double getBasicSalary() {
+        return basicSalary;
+    }
+
+    public double getGrossSalary() {
+        return grossSalary;
+    }
+
+    public double getNetSalary() {
+        return netSalary;
+    }
 }
