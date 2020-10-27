@@ -1,23 +1,20 @@
+
 public class Manager extends Employee{
-	public double petrolAll, foodAll, othAll;
-	public Manager() {
-		super();
+	public double petrol,food,other;
+	
+	public Manager(String ename, double medical, double basic_salary)
+	{
+		super(ename,medical,basic_salary);
+		petrol = 0.08 * basic_salary;
+		food = 0.13*basic_salary;
+		other = 0.03*basic_salary;
 	}
-	public Manager(String name, int sal, int medical) {
-		super(name, sal, medical);
-		petrolAll=0.08*this.basicSalary;
-		foodAll=0.13*this.basicSalary;
-		othAll=0.03*this.basicSalary;
-		this.calcGross();
-		this.calcNet();
+	
+	public double calculateGrossSalary()
+	{
+		return super.calculateGrossSalary() + petrol + food + other;
 	}
-	public void calcGross() {
-		this.grossSalary = this.basicSalary + this.HRA + this.medical+this.petrolAll+this.foodAll+this.othAll;
-	}
-	public void calcNet() {
-		this.netSalary = this.basicSalary + this.HRA + this.medical - this.pt - this.pf;		
-	}
-//	public void printDetails() {
-//		System.out.println();
-//	}
+	
+	
+	
 }

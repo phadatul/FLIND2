@@ -1,36 +1,45 @@
-
 public class Employee {
-	public int empid;
-	public String ename;
-	public double bsal,hra,medical,pf,pt=200,nsal,gsal;
-	 ;
-	
-	public Employee()
-	{
-		
-	}
-	public Employee(int empid , String ename , int bsal , int medical)
-	{	
 
-		this.empid = empid;
+	private int empid;
+	private String ename;
+	private double hra, pf, pt, medical, basic_salary, gross_salary, net_salary;
+	static int count;
+
+	static {
+		count=100;
+	}
+
+	public Employee(String ename, double medical, double basic_salary) {
+		this();
 		this.ename = ename;
-		this.bsal = bsal;
 		this.medical = medical;
-		hra = 0.5 * bsal;
-		pf = 0.12 * bsal;
-		gsal = bsal + hra + medical;
-		nsal = gsal - (pt+pf);
+		this.basic_salary = basic_salary;
+		this.hra = 0.5 * basic_salary;
+		this.pf = 0.12 * basic_salary;
+		this.pt = 200;
 	}
-	public void print()
-	{
-		System.out.println("ID : "+empid);
-		System.out.println("Employee Name : "+ename);
-		System.out.println("Basic Salary : "+bsal);
-		System.out.println("HRA : "+hra);
-		System.out.println("Medical : "+medical);
-		System.out.println("PF : "+pf);
-		System.out.println("PT : "+pt);
-		System.out.println("Net Salary : "+nsal);
-		System.out.println("Gross Salary : "+gsal);
+
+	public Employee() {
+		// TODO Auto-generated constructor stub
+		count++;
+		this.empid = count;
 	}
+
+	public double calculateGrossSalary() {
+		this.gross_salary = this.basic_salary + this.hra + this.medical;
+		return this.gross_salary;
+	}
+
+	public double calculateNetSalary() {
+		this.net_salary = this.calculateGrossSalary() - this.pf - this.pt;
+		return this.net_salary;
+	}
+
+	public void printDetails() {
+		System.out.println("ID:" + this.empid);
+		System.out.println("NAME:" + this.ename);
+		System.out.println("GROSS:" + this.calculateGrossSalary());
+		System.out.println("NET:" + this.calculateNetSalary());
+	}
+
 }
