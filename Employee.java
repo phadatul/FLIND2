@@ -45,6 +45,6 @@ public class Employee {
 	public void showdetails() {
 		System.out.println("Employee ID: " + eid);
 		System.out.println("Gross Salary: " + this.calculategrosssalary());
-		System.out.println("Net Salary: " + this.net_salary);
+// 		System.out.println("Net Salary: " + this.net_salary);
 	}
 }
