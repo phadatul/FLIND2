@@ -39,4 +39,13 @@ public class Employee {
     private void calculateNetSalary() {
         netSalary = grossSalary - (pt + pf);
     }
+
+    public void printDetails() {
+        System.out.println("ID: " + employeeId);
+        System.out.println("Name: " + employeeName);
+        System.out.println("Basic Salary: " + basicSalary);
+        System.out.println("Medical: " + medical);
+        System.out.println("Gross Salary: " + grossSalary);
+        System.out.println("Net Salary: " + netSalary);
+    }
 }
