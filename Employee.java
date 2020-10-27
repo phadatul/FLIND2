@@ -1,8 +1,8 @@
 
 public class Employee {
 
-	private static int eid = 0;
-	private int empid = eid;
+	private static int c= 0;
+	private int empid;
 	private String ename;
 	private double basic_salary;
 	private double hra;
@@ -15,13 +15,13 @@ public class Employee {
 	public Employee()
 	{
 //		System.out.println("a");
-		eid +=1 ;
+		c +=1 ;
+		this.empid = c;
 	}
 	
 	public Employee(String name, double bsal, double med)
 	{
 //		this.eid = id;
-		this();
 		this.ename = name;
 		this.basic_salary = bsal;
 		this.hra = 0.5*bsal;
