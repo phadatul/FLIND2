@@ -1,0 +1,12 @@
+
+public class MarketingExecutive extends Employee {
+	private double kilometersTravelled;
+	private double tourAllowance;
+	private double telephoneAllowance;
+	public MarketingExecutive (String ename, double basicsalary, double medical) {
+		super();
+		
+		
+	}
+
+}

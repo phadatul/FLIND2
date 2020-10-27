@@ -1,0 +1,14 @@
+
+public class Manager extends Employee {
+	private double petrolAllowance;
+	private double foodAllowance;
+	private double otherAllowance;
+	public Manager(String ename, double basicsalary, double medical) {
+		super();
+		petrolAllowance = 0.08 * basicsalary;
+		foodAllowance = 0.13 * basicsalary;
+		otherAllowance = 0.03 * basicsalary;
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+
+public class MarketingExecutive extends Employee {
+	private double kilometersTravelled;
+	private double tourAllowance;
+	private double telephoneAllowance;
+	public MarketingExecutive (String ename, double basicsalary, double medical, double kilometersTravelled) {
+		super();
+		this.kilometersTravelled = kilometersTravelled;
+		tourAllowance = this.kilometersTravelled * 5;
+		telephoneAllowance = 1500;
+		
+		
+	}
+
+}

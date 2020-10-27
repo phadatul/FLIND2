@@ -1,0 +1,8 @@
+
+public class Demo {
+	public static void main(String args[]) {
+		Employee e = new Employee(12,KAPIL,120000);
+		e.printEmp();
+		
+	}
+}

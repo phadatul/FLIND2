@@ -1,0 +1,11 @@
+
+public class Manager extends Employee {
+	private double petrolAllowance;
+	private double foodAllowance;
+	private double otherAllowance;
+	public Manager() {
+		super();
+		
+	}
+
+}

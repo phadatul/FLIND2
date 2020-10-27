@@ -1,0 +1,19 @@
+
+public class Employee {
+	public int empid;
+	public String ename;
+	public int salary;
+	public Employee() {
+		
+	}
+	public Employee(int id, String name, int sal) {
+		empid = id;
+		ename = name;
+		salary = sal;
+	}
+	public void printEmp() {
+		System.out.println("ID: "+empid);
+		System.out.println("NAME: "+ename);
+		System.out.println("SALARY: "+salary);
+	}
+}
