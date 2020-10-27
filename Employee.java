@@ -5,7 +5,7 @@ public class Employee {
  private double BasicSal;
  private double HRA;
  private double Medical, PF, NetSal, GrossSal;
- private double PT=200;
+ private static double PT=200;
  
  public Employee(){
 	 
