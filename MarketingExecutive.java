@@ -8,6 +8,11 @@ public class MarketingExecutive extends Employee {
 		this.tourAllowance = 5 * this.kilometersTravelled;
 		this.telephoneAllowance = 1500;
 	}
+	public void details() {
+		super.details();
+		System.out.println("Tour Allowance : "+this.tourAllowance);
+		System.out.println("Telephone Allowance : "+this.telephoneAllowance);
+	}
 
 	@Override
 	public double calcGrossSalary() {
