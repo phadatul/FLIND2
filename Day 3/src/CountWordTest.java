@@ -9,16 +9,16 @@ public class CountWordTest {
     }
  
     public void countWords(String input) {
-        Map <String, String> map = new HashMap <String, String> ();
+        Map <String, Integer> map = new HashMap <String, Integer> ();
  
         if (input != null) {
             String[] separatedWords = input.split(" ");
             for (String str: separatedWords) {
                 if (map.containsKey(str)) {
-                    int count = Integer.parseInt(map.get(str));
-                    map.put(str, String.valueOf(count + 1));
+                    int count = map.get(str);
+                    map.put(str, count + 1);
                 } else {
-                    map.put(str, "1");
+                    map.put(str, 1);
                 }
             }
         }
