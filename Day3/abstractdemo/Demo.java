@@ -10,5 +10,9 @@ public class Demo {
 
         lion.hello();
         elephant.hello();
+
+        Human human = new Human();
+        human.eatVeg();
+        human.eatMeat();
     }
 }
