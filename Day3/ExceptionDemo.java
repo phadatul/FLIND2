@@ -9,6 +9,9 @@
  *
  */
 
+import java.io.*;
+import java.sql.*;
+
 public class ExceptionDemo {
     public static void main(String[] args) {
         String s = null;
@@ -36,4 +39,23 @@ public class ExceptionDemo {
 
         System.out.println("Reached end of program");
     }
+
+    /* we declare checked exception using `throws` keyword */
+    public static void hello() throws IOException {
+        /* checked exception */
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        bufferedReader.readLine();
+    }
+
+    /* example of `throw` exception */
+    public static void foo() throws SQLIntegrityConstraintViolationException {
+        throw new SQLIntegrityConstraintViolationException();
+    }
+
+    public static void bar() throws MyException {
+        throw new MyException();
+    }
+}
+
+class MyException extends Exception {
 }
