@@ -1,14 +1,14 @@
 import java.util.*;
 
-public class MyStack {
-    private ArrayList arr = new ArrayList();
+public class MyStack<T> {
+    private ArrayList<T> arr = new ArrayList<T>();
 
-    public void push(int data) {
+    public void push(T data) {
         arr.add(data);
     }
 
-    public int pop() {
-        return (int)arr.remove(arr.size() - 1);
+    public T pop() {
+        return arr.remove(arr.size() - 1);
     }
 
     public void print() {
@@ -16,7 +16,7 @@ public class MyStack {
     }
 
     public static void main(String[] args) {
-        MyStack stack = new MyStack();
+        MyStack<Integer> stack = new MyStack<>();
         stack.push(12);
         stack.push(88);
         stack.push(6);
