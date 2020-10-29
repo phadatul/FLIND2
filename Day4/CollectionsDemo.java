@@ -7,7 +7,7 @@ public class CollectionsDemo {
     }
 
     public static void arrayListDemo() {
-        ArrayList arr = new ArrayList();
+        ArrayList<String> arr = new ArrayList<>();
         arr.add("hi");
         arr.add("hello");
         arr.add("bye");
@@ -18,7 +18,7 @@ public class CollectionsDemo {
     public static void vectorDemo() {
         // Vector is thread safe
         // whereas ArrayList is not
-        Vector vec = new Vector();
+        Vector<String> vec = new Vector<>();
         vec.add("hi");
         vec.add("hello");
         vec.add("bye");
