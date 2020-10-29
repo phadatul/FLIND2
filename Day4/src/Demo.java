@@ -16,6 +16,7 @@ public class Demo {
 	 EmpAgeComparator age = new EmpAgeComparator();
 	 Collections.sort(al,age);
 	 System.out.println(al);
-	 
+//	 e1.empage = 40;
+//	 System.out.println(al);
  }
 }
