@@ -23,13 +23,13 @@ public class Employee implements Comparable<Employee> {
         return name;
     }
 
-    public double salary() {
+    public double getSalary() {
         return salary;
     }
 
     @Override
     public String toString() {
-        return "Employee[id = " + empId + "]";
+        return "Employee[id = " + empId + ", name = " + name + ", salary = " + salary + "]";
     }
 
     @Override
@@ -39,12 +39,20 @@ public class Employee implements Comparable<Employee> {
 
     public static void main(String[] args) {
         ArrayList<Employee> empList = new ArrayList<>();
-        empList.add(new Employee(1, "A", 100));
-        empList.add(new Employee(7, "H", 105));
+        empList.add(new Employee(1, "X", 100));
+        empList.add(new Employee(7, "Y", 105));
         empList.add(new Employee(5, "E", 110));
-        empList.add(new Employee(2, "B", 100));
+        empList.add(new Employee(2, "B", 99));
 
         Collections.sort(empList);
+        System.out.println(empList);
+
+        EmployeeSalaryComparator salaryComparator = new EmployeeSalaryComparator();
+        Collections.sort(empList, salaryComparator);
+        System.out.println(empList);
+
+        EmployeeNameComparator nameComparator = new EmployeeNameComparator();
+        Collections.sort(empList, nameComparator);
         System.out.println(empList);
     }
 }
