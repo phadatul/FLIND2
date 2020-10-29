@@ -10,29 +10,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/HelloWorld")
-public class HelloWorld extends HttpServlet {	
-	@Override
-	public void init() throws ServletException {
-		super.init();
-		System.out.println("HelloWorld servlet init called");
-	}
-	
-	@Override
-	public void destroy() {
-		super.destroy();
-		System.out.println("HelloWorld servlet destroy called");
-	}
-	
+public class HelloWorld extends HttpServlet {		
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("HelloWorld servlet doGet called");
 		PrintWriter out = response.getWriter();
-		out.println("Hello World");
+		out.println("Hello World!");
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("HelloWorld servlet doPost called");
+		PrintWriter out = response.getWriter();
+		out.println("Hello " + request.getParameter("name") + "!");
 	}
 
 }
