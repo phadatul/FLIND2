@@ -27,6 +27,10 @@ public class Employee implements Comparable<Employee> {
         return salary;
     }
 
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
     @Override
     public String toString() {
         return "Employee[id = " + empId + ", name = " + name + ", salary = " + salary + "]";
@@ -54,5 +58,12 @@ public class Employee implements Comparable<Employee> {
         EmployeeNameComparator nameComparator = new EmployeeNameComparator();
         Collections.sort(empList, nameComparator);
         System.out.println(empList);
+
+        updateSalary(empList, 0, 90);
+        System.out.println(empList);
+    }
+
+    public static void updateSalary(ArrayList<Employee> arr, int index, double newSalary) {
+        arr.get(index).setSalary(newSalary);
     }
 }
