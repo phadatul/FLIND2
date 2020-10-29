@@ -43,6 +43,15 @@ public class demo {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		int result = c.insert(36,"Shiv",196000);
+		System.out.println(result);
+		if(result>0) {
+			System.out.println("Inserted successfully");
+		}
+		else {
+			System.out.println("Update failed");
+		}
+		
 	}
 	
 }

@@ -48,14 +48,22 @@ public class controller {
 		}
 		return rs;
 	}
-	public boolean insert(int empid, String name, int salary) {
+	public int insert(int empid, String name, int salary) {
 		try {
-			return st.execute("INSERT INTO employee (empid, name, salary) VALUES (empid, name, salary)");
+			PreparedStatement ps = con.prepareStatement("insert into employee (empid,name,salary) values(?,?,?)");
+			ps.setInt(1, empid);
+			ps.setString(2, name);
+			ps.setInt(3, salary);
+			return ps.executeUpdate();
+			
+			
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return false;
+			return 0;
 		}
+//		return false;
 	}
 	
 	public boolean update(int empid, String name, int salary) {
