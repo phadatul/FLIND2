@@ -1,4 +1,4 @@
 # FLIND2
 
-Day 2 : Payroll \n
-Day 3 : OOP Assignment
+Day 2 : Payroll <br />
+Day 3 : OOP Assignment <br />
