@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+
+function hello() {
+	
+	var x=document.getElementById('emailid').value;
+	document.getElementById('mypara').innerHTML = x.toUpperCase();
+	alert(x);
+}
+
+</script>
+
+</head>
+<body>
+
+<h2> User Details</h2>
+<button onclick="hello()"> submit </button>
+
+<form>
+
+<label for="fname">User name:</label>
+<input type="text" name="username" /><br>
+<label for="lname">Password:</label>
+<input type="number" name="password" /><br>
+<label for="lname">Email Id:</label>
+<input type="text" name="emailid" /><br>
+<input type="button" onclick="hello()" />
+
+
+
+</form>
+
+<P id= "mypara"> Your mail will appear here...... </P>
+
+</body>
+</html>
