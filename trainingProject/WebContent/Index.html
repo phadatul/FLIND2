@@ -3,9 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type = "text/javascript">
+
+function validateForm() {
+	  var x = document.getElementById("fname").value;
+	  if (x == "") {
+	    alert("Name must be filled out");
+	    document.getElementById("fname").focus();
+	    return false;
+	  }
+	  else{
+		  return true;
+	  }
+	}
+</script>
+
 </head>
 <body>
-<form action="HelloWorld" method="get">
+<form action="HelloWorld" method="get" onsubmit = "return validateForm()">
   <label for="fname">First name:</label><br>
   <input type="text" id="fname" name="fname" ><br><br>
   <label for="lname">Last name:</label><br>
