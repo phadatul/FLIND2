@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Employee</title>
+</head>
+<body>
+<div>
+<h1>Add User</h1><br/>
+<form method="post" action="EmployeeControllerAddUser">
+<input type="number" name="empId"/><br/>
+<input type="text" name="empName"/><br/>
+<input type="number" name="salary"/><br/>
+<input type="submit"/>
+</form>
+
+<h1>Update User</h1><br/>
+<form method="post" action="EmployeeControllerUpdateUser">
+<input type="number" name="empId"/><br/>
+<input type="text" name="empName"/><br/>
+<input type="number" name="salary"/><br/>
+<input type="submit"/>
+</form>
+
+<h1>Delete User</h1><br/>
+<form method="post" action="EmployeeControllerDeleteUser">
+<input type="number" name="empId"/><br/>
+<input type="submit"/>
+</form>
+
+<h1>Show All Employees</h1><br/>
+<a href="EmployeeControllerDisplayUser">Show all employee</a>
+
+</div>
+</body>
+</html>
