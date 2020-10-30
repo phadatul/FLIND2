@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function handleForm() {
+	var emailInput = document.getElementById("email");
+	var emailDiv = document.getElementById("emailDiv");
+	emailDiv.innerHTML = emailInput.value.toUpperCase();
+}
+</script>
+</head>
+<body>
+<form>
+	<div>First Name: <input type="text" id="firstName"></div>
+	<div>Last Name: <input type="text" id="lastName"></div>
+	<div>Email: <input type="email" id="email"></div>
+	<input type="button" onclick="handleForm()" value="Submit">
+</form>
+
+<p>Your email will appear here in upper-case: <span id='emailDiv'></span></p>
+</body>
+</html>
