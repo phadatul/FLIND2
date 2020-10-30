@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function validate() {
+		var el = document.getElementById("age");
+		var age = el.value;
+		if (age > 18 && age < 100) {
+			return true;
+		} else {
+			alert("Age should be between 18 and 100 years");
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+<p>Enter age</p>
+<form onsubmit="return validate()" action="http://example.com">
+	<input type="number" id="age">
+	<input type="submit">
+</form>
+</body>
+</html>
