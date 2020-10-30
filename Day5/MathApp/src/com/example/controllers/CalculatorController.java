@@ -23,8 +23,22 @@ public class CalculatorController extends HttpServlet {
 		
 		int num1 = Integer.parseInt(request.getParameter("num1"));
 		int num2 = Integer.parseInt(request.getParameter("num2"));
+		String operation = request.getParameter("operation");
 		
+		int result;
 		Calculator calculator = new Calculator();
-		out.println(calculator.add(num1, num2));
+		if (operation.equals("add")) {
+			result = calculator.add(num1, num2);
+		} else if (operation.equals("sub")) {
+			result = calculator.subtract(num1, num2);
+		} else if (operation.equals("mul")) {
+			result = calculator.multiply(num1, num2);
+		} else if (operation.equals("div")) {
+			result = calculator.divide(num1, num2);
+		} else {
+			out.println("Operation not allowed!");
+			return;
+		}
+		out.println(result);
 	}
 }
