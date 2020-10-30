@@ -4,3 +4,6 @@
 
 - Day3
     - [OOP Assignment](https://github.com/phadatul/FLIND2/tree/Anmol/Day3/assignment1)
+
+- Day 5
+    - [Employee CRUD App](https://github.com/phadatul/FLIND2/tree/Anmol/Day5/EmployeeApp)
