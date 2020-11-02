@@ -39,4 +39,17 @@ public class Employee {
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
 	}
+	
+	@Override
+	public boolean equals(Object other) {
+		if (!(other instanceof Employee)) return false;
+		
+		Employee e = (Employee) other;
+		return e.id == id;
+	}
+	
+	@Override
+	public int hashCode() {
+		return id;
+	}
 }
