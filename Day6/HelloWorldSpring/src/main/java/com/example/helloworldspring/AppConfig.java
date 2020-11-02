@@ -15,4 +15,9 @@ public class AppConfig {
 	public Dog getDog() {
 		return new Dog();
 	}
+	
+	@Bean
+	public Address getAddress() {
+		return new Address();
+	}
 }

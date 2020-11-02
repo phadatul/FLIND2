@@ -14,7 +14,15 @@ public class HelloWorldSpringApplication {
 		employee.greet();
 		
 		Dog dog = appContext.getBean(Dog.class);
+		dog.setName("TM");
 		dog.greet();
+		
+		Address address = appContext.getBean(Address.class);
+		address.setCity("KT");
+		address.setPinCode("110022");
+		System.out.println(address);
+		
+		System.out.println(employee);
 	}
 
 }
