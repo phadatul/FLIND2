@@ -1,8 +1,15 @@
 package com.example.helloworldspring;
 
+import java.sql.CallableStatement;
+import java.sql.SQLException;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.CallableStatementCallback;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.support.rowset.SqlRowSet;
 
 @SpringBootApplication
 public class HelloWorldSpringApplication {
@@ -23,6 +30,12 @@ public class HelloWorldSpringApplication {
 		System.out.println(address);
 		
 		System.out.println(employee);
+		
+		JdbcTemplate template = appContext.getBean(JdbcTemplate.class);
+		SqlRowSet rs = template.queryForRowSet("select * from employees");
+		while (rs.next()) {
+            System.out.println(rs.getInt("empid") + " " + rs.getString("name") + " " + rs.getDouble("salary"));
+        }
 	}
 
 }
