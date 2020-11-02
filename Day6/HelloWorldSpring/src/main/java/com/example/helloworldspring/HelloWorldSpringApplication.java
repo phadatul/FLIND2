@@ -12,6 +12,9 @@ public class HelloWorldSpringApplication {
 		
 		Employee employee = appContext.getBean(Employee.class);
 		employee.greet();
+		
+		Dog dog = appContext.getBean(Dog.class);
+		dog.greet();
 	}
 
 }
