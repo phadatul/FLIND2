@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* x=prompt("Enter your value"); */
+
+/* console.log("hello")
+var a=98;
+a="hello world"
+a= new Date();
+document.write(a) */
+function hello(){
+	var x = document.getElementById("txtemail").value;
+	document.getElementById("myPara").innerHTML=x;
+}
+
+function validate(){
+	
+	document.getElementById("pID").style.display="inline";
+	document.getElementById("pID").style.color="red";
+	return false;
+	
+}
+
+</script>
+</head>
+<body>
+	<form action="http://google.com" onsubmit="return validate()">
+	
+	User Name: <input type="text" name="username" id="txtfirst"/>
+	<br/><p id ="pID" style="display:none"> Username invalid</p>
+	<br/>
+	
+	Password: <input type="password" name="username" id="txtsecond"/><br/>
+	Email: <input type="text" name="email" id="txtemail"/><br/>
+	Submit: <input type="submit"  />
+	
+	</form>
+
+<P id="myPara">Your email will appear hear...</P>
+</body>
+</html>
