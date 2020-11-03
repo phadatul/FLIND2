@@ -1,0 +1,21 @@
+Created By:- Aarushi Sehgal
+PID:- 45120364
+
+
+*************************************************************************************************
+
+
+The Java Program/Application implemented in this folder contains the following classes with their functionalities defined as follows:-
+
+1) TextNote:- Contains the attributes of and represents a plain Text Note.
+
+2) TextAndImageNote:- Contains the attributes of and represents a note contaning both Text and Image url.
+
+3) NoteStore:- Class used for storing both TextNote and TextAndImageNote, and for returning the array list contaning the aforementioned notes.
+
+4) Launcher:- Class represented the user interface window, where users give their note inputs and through which they access notes. It is used for adding notes to the NoteStore, retrieving notes from the note store and displaying the notes clearly in a readable format through displayTextNotes() and displayTextAndImageNotes() functions.
+
+
+
+*************************************************************************************************
+
