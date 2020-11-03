@@ -23,7 +23,7 @@ public class Launcher {
 		
 		ArrayList<TextNote> printingList = new ArrayList<TextNote>();
 		
-		printingList = o.getAllTextAndImageNotes();
+		printingList = o1.getAllTextAndImageNotes();
 		int count = 1;
 		for(TextNote t : printingList) {
 			System.out.println("Text Note " + count + ": " +  t.getTxt());
