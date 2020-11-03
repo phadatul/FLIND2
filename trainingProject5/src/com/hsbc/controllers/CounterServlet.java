@@ -28,22 +28,19 @@ public class CounterServlet extends HttpServlet {
 		try { FileReader fileReader = new FileReader("InitDestroyCounter.initial"); 
 		BufferedReader bufferedReader = new BufferedReader(fileReader); 
 		String initial=null;
-		try {
-			initial = bufferedReader.readLine();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
+		
+		initial = bufferedReader.readLine();
+		
 		iHitCounter = Integer.parseInt(initial); 
 		return; 
 		} 
 		catch (FileNotFoundException ignored) { } // no saved state 
 		catch (IOException ignored) { } // problem during read 
 		catch (NumberFormatException ignored) { } // corrupt saved state // No luck with the saved state, check for an init parameter 
-		String initial = getInitParameter("initial"); 
-		try { iHitCounter = Integer.parseInt(initial); 
-		return; } 
-		catch (NumberFormatException ignored) { } // null or non-integer value // Default to an initial count of "0" 
+//		String initial = getInitParameter("initial"); 
+//		try { iHitCounter = Integer.parseInt(initial); 
+//		return; } 
+//		catch (NumberFormatException ignored) { } // null or non-integer value // Default to an initial count of "0" 
 		iHitCounter = 0; 
 		
 	} 
