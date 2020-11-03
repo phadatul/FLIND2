@@ -22,12 +22,19 @@ public class Launcher {
 		
 	}
 	
+	/*
+	* Gets all TextNotes using getAllTextNotes method and prints each one using the printNote method
+	*/
 	public static void displayTextNotes(NoteStore notestore) {
 		ArrayList<TextNote> textNotes = notestore.getAllTextNotes();
 		for(int i=0; i<textNotes.size(); i++) {
 			textNotes.get(i).printNote();
 		}
 	}
+	
+	/*
+	* Gets all Text&ImageNotes using getAllTextAndImageNotes method and prints each one using the printNote method
+	*/
 	
 	public static void displayTextAndImageNotes(NoteStore notestore) {
 		ArrayList<TextAndImageNote> textAndImageNotes = notestore.getAllTextAndImageNotes();
