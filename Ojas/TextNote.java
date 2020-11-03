@@ -1,7 +1,7 @@
 public class TextNote extends Note{
 
 	public TextNote(String text, String title) {
-		super(text, title);
+		super(title, text);
 	}
 	
 	// overridden prinNote method
