@@ -21,7 +21,7 @@ public class Launcher {
 	// function for clearly displaying the notes containing both Text and Image Url
 	public void displayTextAndImageNotes(NoteStore o1) {
 		
-		ArrayList<TextNote> printingList = new ArrayList<TextNote>();
+		ArrayList<TextAndImageNote> printingList = new ArrayList<TextAndImageNote>();
 		
 		printingList = o1.getAllTextAndImageNotes();
 		int count = 1;
