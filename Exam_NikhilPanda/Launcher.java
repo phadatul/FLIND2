@@ -1,5 +1,7 @@
 package com.hsbc.notes;
 
+import java.util.*;
+
 /**
  * This is the launcher class where the notes are initialized and displayed.
  * This class contains the main method.
@@ -29,7 +31,10 @@ public class Launcher {
 	 * @param note : This contains the list of text notes to be displayed.
 	 */
 	public static void displayTextNotes(NoteStore note) {
-		note.getAllTextNotes();
+		List<TextNote> listOfTextNote = note.getAllTextNotes();
+		for (int i = 0; i < listOfTextNote.size(); i++) {
+			System.out.println("Text Note " + (i + 1) + ": " + listOfTextNote.get(i).getText());
+		}
 	}
 
 	/**
@@ -39,6 +44,10 @@ public class Launcher {
 	 */
 
 	public static void displayTextAndImageNotes(NoteStore note) {
-		note.getAllTextAndImageNotes();
+		List<TextAndImageNote> listOfTextAndImageNote = note.getAllTextAndImageNotes();
+		for (int i = 0; i < listOfTextAndImageNote.size(); i++) {
+			System.out.println("Text and Image Note " + (i + 1) + ": " + listOfTextAndImageNote.get(i).getText() + ", "
+					+ listOfTextAndImageNote.get(i).getUrlOfPhoto());
+		}
 	}
 }
