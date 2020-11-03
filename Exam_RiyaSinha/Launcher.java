@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Launcher {
 	
+	//method to display text notes
 	public static void displayTextNotes(NoteStore notestore) {
 		
 		List<TextNote> list = notestore.getAllTextNotes();
@@ -16,6 +17,7 @@ public class Launcher {
 		
 	}
 	
+	//method to display text and image notes
 	public static void displayTextAndImageNotes(NoteStore notestore) {
 		List<TextAndImageNote> list = notestore.getAllTextAndImageNotes();
 		for( int i = 0; i<list.size();i++) {
