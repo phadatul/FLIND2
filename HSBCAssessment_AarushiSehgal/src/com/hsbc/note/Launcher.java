@@ -26,7 +26,7 @@ public class Launcher {
 		printingList = o1.getAllTextAndImageNotes();
 		int count = 1;
 		for(TextAndImageNote t : printingList) {
-			System.out.println("Text Note " + count + ": " +  t.getTxt());
+			System.out.println("Text And Image Note " + count + ": " +  t.getTxt());
 			count ++;
 		}
 		
