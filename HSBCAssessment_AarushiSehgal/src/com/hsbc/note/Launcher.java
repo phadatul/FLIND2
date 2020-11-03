@@ -7,13 +7,30 @@ public class Launcher {
 	// function for clearly displaying the notes containing only Text 
 	public void displayTextNotes(NoteStore o) {
 		
-		System.out.println(o.getAllTextNotes());
+		ArrayList<TextNote> printingList = new ArrayList<TextNote>();
+		
+		printingList = o.getAllTextNotes();
+		int count = 1;
+		for(TextNote t : printingList) {
+			System.out.println("Text Note " + count + ": " +  t.getTxt());
+			count ++;
+		}
+		//System.out.println(o.getAllTextNotes());
 	}
 	
 	// function for clearly displaying the notes containing both Text and Image Url
 	public void displayTextAndImageNotes(NoteStore o1) {
 		
-		System.out.println(o1.getAllTextAndImageNotes());
+		ArrayList<TextNote> printingList = new ArrayList<TextNote>();
+		
+		printingList = o.getAllTextAndImageNotes();
+		int count = 1;
+		for(TextNote t : printingList) {
+			System.out.println("Text Note " + count + ": " +  t.getTxt());
+			count ++;
+		}
+		
+		//System.out.println(o1.getAllTextAndImageNotes());
 	}
 
 	public static void main(String[] args) {
