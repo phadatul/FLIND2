@@ -1,3 +1,5 @@
+
+
 public class MarketingExecutive extends Employee{
 	public double kms, tourAll, telAll;
 	public MarketingExecutive() {
@@ -21,4 +23,5 @@ public class MarketingExecutive extends Employee{
 //		System.out.println();
 //	}
 }
+
 
