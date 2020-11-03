@@ -1,0 +1,14 @@
+Note:
+Parent class of TextNotes and ImageNotes to abstract out common features
+
+TextNote:
+Class for Text notes. Overides the print method defined in the parent class
+
+TextAndImageNote:
+Class for Text & Image notes. Overides the print method defined in the parent class, contains the additional parameter of URL 
+
+NoteStore:
+Contains 2 arraylists for storing 2 different types of notes. 2 overloaded method with the same name (storeNote) to add different types of Notes to the resp ArrayLists
+
+Launcher:
+Conatins Main and 2 utility methods to print the lists  

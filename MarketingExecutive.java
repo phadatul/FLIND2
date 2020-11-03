@@ -1,21 +1,27 @@
 
-public class MarketingExecutive extends Employee {
-	private double kilometersTravelled, tourAllowance, telephoneAllowance;
 
-	public MarketingExecutive(String name, int salary, double kilometersTravlled) {
-		super(name, salary);
-		this.kilometersTravelled = kilometersTravlled;
-		this.tourAllowance = 5 * this.kilometersTravelled;
-		this.telephoneAllowance = 1500;
+public class MarketingExecutive extends Employee{
+	public double kms, tourAll, telAll;
+	public MarketingExecutive() {
+		super();
 	}
-	public void details() {
-		super.details();
-		System.out.println("Tour Allowance : "+this.tourAllowance);
-		System.out.println("Telephone Allowance : "+this.telephoneAllowance);
+	public MarketingExecutive(String name, int sal, int medical, int kms) {
+		super(name, sal, medical);
+		this.kms=kms;
+		tourAll=5*this.kms;
+		telAll=1500;
+		this.calcGross();
+		this.calcNet();
 	}
-
-	@Override
-	public double calcGrossSalary() {
-		return super.calcGrossSalary() + this.tourAllowance + this.telephoneAllowance;
+	public void calcGross() {
+		this.grossSalary = this.basicSalary + this.HRA + this.medical+this.telAll+this.tourAll;
 	}
+	public void calcNet() {
+		this.netSalary = this.basicSalary + this.HRA + this.medical - this.pt - this.pf;		
+	}
+//	public void printDetails() {
+//		System.out.println();
+//	}
 }
+
+
