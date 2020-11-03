@@ -9,7 +9,7 @@ import java.util.*;
  * @author nikhil
  *
  */
-public class NoteStore {
+public class NoteStore implements NoteStoreInterface {
 
 	private List<TextNote> listOfTextNote;
 	private List<TextAndImageNote> listOfTextAndImageNote;
@@ -65,10 +65,8 @@ public class NoteStore {
 	 * is called.
 	 * 
 	 */
-	public void getAllTextNotes() {
-		for (int i = 0; i < listOfTextNote.size(); i++) {
-			System.out.println("Text Note " + (i + 1) + ": " + listOfTextNote.get(i).getText());
-		}
+	public List<TextNote> getAllTextNotes() {
+		return this.listOfTextNote;
 	}
 
 	/**
@@ -77,11 +75,8 @@ public class NoteStore {
 	 * 
 	 */
 
-	public void getAllTextAndImageNotes() {
-		for (int i = 0; i < listOfTextAndImageNote.size(); i++) {
-			System.out.println("Text and Image Note " + (i + 1) + ": " + listOfTextAndImageNote.get(i).getText() + ", "
-					+ listOfTextAndImageNote.get(i).getUrlOfPhoto());
-		}
+	public List<TextAndImageNote> getAllTextAndImageNotes() {
+		return this.listOfTextAndImageNote;
 	}
 
 }
