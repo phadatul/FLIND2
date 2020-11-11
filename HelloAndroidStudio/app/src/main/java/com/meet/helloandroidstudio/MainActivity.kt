@@ -7,14 +7,40 @@ import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var editText:EditText;
+    lateinit var sendButton: Button;
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("MainActivity","onResume")
+    }
+    override fun onStart() {
+        super.onStart()
+        Log.i("MainActivity","onStart")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("MainActivity","onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i("MainActivity","onStop")
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("MainActivity","onDestroy")
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.i("MainActivity","onCreate")
 //        setContentView(R.layout.activity_main)
 
         //infalte a layout
@@ -22,7 +48,31 @@ class MainActivity : AppCompatActivity() {
         //attach the infated view tree to activity
         setContentView(mainView)
 
+        val launchingIntent = getIntent()
+        if(launchingIntent.extras!=null){
+            Log.i("MainActivity","launching intent has extras")
+        }
+        else
+            Log.i("MainActivity","launching intent has NO extras")
+
+
         editText = findViewById(R.id.editText)
+        sendButton = findViewById(R.id.sendButton)
+//        sendButton.setOnClickListener(object:View.OnClickListener{
+//            override fun onClick(p0: View?) {
+//                Log.i("MainActivity","ButtonTapped")
+//            }
+//        })
+
+        sendButton.setOnClickListener{
+            val text = editText.editableText.toString()
+            Log.i("MainActivity","User entered = $text")
+
+            val intent = Intent(this,SecondActivity::class.java)
+            intent.putExtra("MESSAGE",text)
+            startActivity(intent)
+        }
+
 
 //
 //        if(savedInstanceState !=null)
