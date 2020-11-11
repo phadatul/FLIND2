@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HelloAndroidStudio</string>
+
+    <string name="home_screen_message">Hello from android</string>
+</resources>
